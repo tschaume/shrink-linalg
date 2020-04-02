@@ -8,8 +8,8 @@ fi
 
 tag=$1
 url=https://github.com/tschaume/shrink-linalg/blob/$tag/Dockerfile
-echo "- [$tag]($url): " `cat requirements.txt | tr '\n' ' '` >> README.md
-
+reqs=`sed 's/==/-/g' requirements.txt | tr '\n' ' ' | xargs | sed 's/ / • /g'`
+echo "- [$tag]($url): $reqs" >> README.md
 git add README.md
 git commit -m "$tag"
 git tag $tag
