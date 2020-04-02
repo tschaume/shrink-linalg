@@ -1,5 +1,6 @@
-FROM python:3.6-slim-jessie
+FROM python:3.8-slim-buster
 MAINTAINER Scott Zelenka (szelenka)
+MAINTAINER Patrick Huck (tschaume)
 
 COPY ./library-dependencies.txt /tmp/library-dependencies.txt
 COPY ./requirements.txt /tmp/requirements.txt
