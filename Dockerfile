@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:3.8.2-slim
 MAINTAINER Scott Zelenka (szelenka)
 MAINTAINER Patrick Huck (tschaume)
 
